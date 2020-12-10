@@ -76,8 +76,8 @@ class GamesController extends Controller
                 where slug=\"{$slug}\";",
                 "text/plain"
             )->post('https://api.igdb.com/v4/games/', [])->json();
-
         });
+
         if(isset($game[0]['similar_games'])){
             $similarGames=collect($game[0]['similar_games'])->map(function ($game1) {
                 return collect($game1)->merge([

@@ -1,6 +1,6 @@
 <div class="realative" x-data="{isVisible: true}"@click.away="isVisible=false">
     <input
-     wire:model.debounce.100ms="search" 
+     wire:model.debounce.500ms="search" 
      @focus="isVisible=true" 
      x-ref="search"
      @keydown.window="if(event.keyCode===191){
